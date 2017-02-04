@@ -138,7 +138,6 @@ class Main:
                     zeile = txt.readline()
                 txt.close()
                 fileout.close()
-
         nachThemen()
 
         def herunterladen():
