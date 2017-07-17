@@ -14,7 +14,7 @@ except:
     print "kann xbmc-module nicht laden"
 import socket
 import codi
-
+##################
 _id='plugin.video.telek'
 programpath=os.path.dirname( os.path.realpath( __file__ ) )
 ImgPath = programpath + "/resources/media/logos"
