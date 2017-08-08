@@ -260,6 +260,6 @@ class Main:
                             addListItem(title, url[:-1], 'icon.png')
                     zeile = txt.readline()
                 txt.close()
-            
+           
                 xbmcplugin.endOfDirectory(addon_handle)
         
