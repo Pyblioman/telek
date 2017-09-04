@@ -171,7 +171,7 @@ class Main:
                 for kanal in list1[1]:
                     print "Suchen:", kanal
                     for item in os.listdir(PlayListsPath):
-                            if len(item[:1])>0 and item[:1]!='.' and item[len(item)-4:].upper()=='.M3U' and item[:1]!='KinodromSlyNet.m3u':
+                            if len(item[:1])>0 and item[:1]!='.' and item[len(item)-4:].upper()=='.M3U' and item!='KinodromSlyNet.m3u':
                                 if os.path.isfile(os.path.join(PlayListsPath, item)):
                                     print "    lesen:", item
                                     txt=open(PlayListsPath + "/" + item,'r')
