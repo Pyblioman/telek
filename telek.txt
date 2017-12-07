@@ -53,7 +53,7 @@ class Main:
                 "SET",
                 "STV",
                 "sony",
-                "akudji";
+                "akudji",
                 "ретро",
                 "носталь",
                 "русский иллюзион",
