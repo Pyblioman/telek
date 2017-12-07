@@ -50,6 +50,7 @@ class Main:
                 "кинохит",
                 "TV1000",
                 "фильм",
+                "akudj",
                 "SET",
                 "STV",
                 "sony",
