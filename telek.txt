@@ -291,13 +291,13 @@ class Main:
                 zeile = txt.readline()
                 while zeile and zeile.find("=== PEERSTV (OFF) ===")==-1:
                     if zeile[:10]=="#EXTINF:0,":
-                        title=zeile.split(",")[-1][:len(zeile.split(",")[-2])]
+                        title=zeile.split(",")[-1][:-1]
                         zeile = txt.readline()
                         if zeile[:1]!="#":
                             url=zeile
                             addListItem(title + '.png', url[:-1], title + '.png')
                     if zeile[:11]=="#EXTINF:-1,":
-                        title=zeile.split(",")[-1][:len(zeile.split(",")[-2])]
+                        title=zeile.split(",")[-1][:-1]
                         zeile = txt.readline()
                         if zeile[:1]!="#" and title[0:1]!="=" and title.find("PremiumSlyNet")==-1 and title.find("==")==-1:
                             url=zeile
@@ -313,13 +313,13 @@ class Main:
                 zeile = txt.readline()
                 while zeile and zeile.find("=== PEERSTV (OFF) ===")==-1:
                     if zeile[:10]=="#EXTINF:0,":
-                        title=zeile.split(",")[-1][:len(zeile.split(",")[-2])]
+                        title=zeile.split(",")[-1][:-1]
                         zeile = txt.readline()
                         if zeile[:1]!="#":
                             url=zeile
                             addListItem(title + '.png', url[:-1], title + '.png')
                     if zeile[:11]=="#EXTINF:-1,":
-                        title=zeile.split(",")[-1][:len(zeile.split(",")[-2])]
+                        title=zeile.split(",")[-1][:-1]
                         zeile = txt.readline()
                         if zeile[:1]!="#" and title[0:1]!="=" and title.find("PremiumSlyNet")==-1 and title.find("==")==-1:
                             url=zeile
