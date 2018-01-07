@@ -290,6 +290,12 @@ class Main:
                 txt=open(foldername,'r')
                 zeile = txt.readline()
                 while zeile and zeile.find("=== PEERSTV (OFF) ===")==-1:
+                    zeile=zeile[:len(zeile)-1]
+                    if len(zeile)>0 and ord(zeile[len(zeile)-1:len(zeile)])==13:
+                        zeile=zeile[:len(zeile)-1]
+                    if len(zeile)>0 and zeile[len(zeile)-1:len(zeile)]==" ":
+                        zeile=zeile[:len(zeile)-1]
+                    zeile=zeile + "\n"
                     if zeile[:10]=="#EXTINF:0,":
                         title=zeile.split(",")[-1][:-1]
                         zeile = txt.readline()
@@ -312,6 +318,12 @@ class Main:
                 txt=open(foldername,'r')
                 zeile = txt.readline()
                 while zeile and zeile.find("=== PEERSTV (OFF) ===")==-1:
+                    zeile=zeile[:len(zeile)-1]
+                    if len(zeile)>0 and ord(zeile[len(zeile)-1:len(zeile)])==13:
+                        zeile=zeile[:len(zeile)-1]
+                    if len(zeile)>0 and zeile[len(zeile)-1:len(zeile)]==" ":
+                        zeile=zeile[:len(zeile)-1]
+                    zeile=zeile + "\n"
                     if zeile[:10]=="#EXTINF:0,":
                         title=zeile.split(",")[-1][:-1]
                         zeile = txt.readline()
