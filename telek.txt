@@ -295,13 +295,13 @@ class Main:
                         zeile = txt.readline()
                         if zeile[:1]!="#":
                             url=zeile
-                            addListItem(title, url[:-1], title + '.png')
+                            addListItem(title + '.png', url[:-1], title + '.png')
                     if zeile[:11]=="#EXTINF:-1,":
                         title=zeile[11:]
                         zeile = txt.readline()
                         if zeile[:1]!="#" and title[0:1]!="=" and title.find("PremiumSlyNet")==-1 and title.find("==")==-1:
                             url=zeile
-                            addListItem(title, url[:-1], title + '.png')
+                            addListItem(title + '.png', url[:-1], title + '.png')
                     zeile = txt.readline()
                 txt.close()
             
@@ -317,13 +317,13 @@ class Main:
                         zeile = txt.readline()
                         if zeile[:1]!="#":
                             url=zeile
-                            addListItem(title, url[:-1], title + '.png')
+                            addListItem(title + '.png', url[:-1], title + '.png')
                     if zeile[:11]=="#EXTINF:-1,":
                         title=zeile[11:]
                         zeile = txt.readline()
                         if zeile[:1]!="#" and title[0:1]!="=" and title.find("PremiumSlyNet")==-1 and title.find("==")==-1:
                             url=zeile
-                            addListItem(title, url[:-1], title + '.png')
+                            addListItem(title + '.png', url[:-1], title + '.png')
                     zeile = txt.readline()
                 txt.close()
             
