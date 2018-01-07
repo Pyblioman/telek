@@ -246,7 +246,7 @@ class Main:
                 except:
                     print "download " + jedeurl + " nicht erfolgreich"
                 try:
-                    download("https" + jedeurl[4:], PlayListsPath + "/", j)
+                    download("https" + jedeurl[5:], PlayListsPath + "/", j)
                 except:
                     print "download " + jedeurl + " nicht erfolgreich"
             nachThemen()
