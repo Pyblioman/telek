@@ -332,7 +332,7 @@ class Main:
                         zeile=zeile[:len(zeile)-1]
                     if len(zeile)>0 and zeile[len(zeile)-1:len(zeile)]==" ":
                         zeile=zeile[:len(zeile)-1]
-                    if zeile[:8]=="#EXTINF:,":
+                    if zeile[:8]=="#EXTINF:":
                         title=zeile.split(",")[-1]
                         #addListItem(zeile.split(",")[-1], "http://test.com/", 'Test.PNG')
                         while zeile[:1]=="#":
