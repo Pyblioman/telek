@@ -1,3 +1,3 @@
 # telek
-plagin for Kodi
+plugin for Kodi
 not ready
