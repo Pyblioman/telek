@@ -245,7 +245,11 @@ class Main:
                     download(jedeurl, PlayListsPath + "/", j)
                 except:
                     print "download " + jedeurl + " nicht erfolgreich"
-            nachThemen()
+                try:
+                    download("https" + jedeurl[4:], PlayListsPath + "/", j)
+                except:
+                    print "download " + jedeurl + " nicht erfolgreich"
+nachThemen()
 
         #--------------------------------------------------- 
         base_url = sys.argv[0]
