@@ -107,8 +107,8 @@ class Main:
             os.mkdir(PlayListsPath + "/тема")
 
         def dateiname(pfad):
-            for item in pfad.split("/"): 
-                datei=item
+            datei=pfad.split("/")[-1] 
+            datei=pfad.split("?")[0]
             return datei
 
         def read_url(textdatei):
