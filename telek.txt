@@ -322,17 +322,18 @@ class Main:
             
                 xbmcplugin.endOfDirectory(addon_handle)
             else:
-                addListItem("Test", "http://test.com/", 'Test.PNG')
                 foldername = PlayListsPath + '/' + args['foldername'][0]
                 print "lesen: " + foldername
                 txt=open(foldername,'r')
                 zeile = txt.readline()
+                addListItem(zeile[:8], "http://test.com/", 'Test.PNG')
                 while zeile and zeile.find("=== PEERSTV (OFF) ===")==-1:
                     zeile=zeile[:len(zeile)-1]
                     if len(zeile)>0 and ord(zeile[len(zeile)-1:len(zeile)])==13:
                         zeile=zeile[:len(zeile)-1]
                     if len(zeile)>0 and zeile[len(zeile)-1:len(zeile)]==" ":
                         zeile=zeile[:len(zeile)-1]
+                    addListItem(zeile.split(",")[-1], "http://test.com/", 'Test.PNG')
                     if zeile[:8]=="#EXTINF:,":
                         title=zeile.split(",")[-1]
                         while zeile[:1]=="#":
