@@ -233,6 +233,8 @@ class Main:
                     i=i+1
                     fileout.write("#EXTINF:0," + "Liste " + str(i) + "\n")
                     fileout.write(codi.kodi2Aus(zeile) + "\n")
+                    fileout.write("#EXTINF:0," + "Liste " + str(i) + "\n")
+                    fileout.write(codi.kodi2SAus(zeile) + "\n")
                     zeile = txt.readline()
                 txt.close()
                 fileout.close()
@@ -243,10 +245,6 @@ class Main:
                 j+=1
                 try:
                     download(jedeurl, PlayListsPath + "/", j)
-                except:
-                    print "download " + jedeurl + " nicht erfolgreich"
-                try:
-                    download("https://" + jedeurl[8:], PlayListsPath + "/", j)
                 except:
                     print "download " + jedeurl + " nicht erfolgreich"
             nachThemen()
