@@ -108,7 +108,7 @@ class Main:
 
         def dateiname(pfad):
             datei=pfad.split("/")[-1] 
-            datei=pfad.split("?")[0]
+            datei=datei.split("?")[0]
             return datei
 
         def read_url(textdatei):
