@@ -300,13 +300,13 @@ class Main:
                         zeile = txt.readline()
                         if zeile[:1]!="#":
                             url=zeile
-                            addListItem(title, url[:-1], title.split(" - ")[-1].upper() + '.png')
+                            addListItem(title, url[:-1], title.split(" - ")[-1].upper() + '.PNG')
                     if zeile[:11]=="#EXTINF:-1,":
                         title=zeile.split(",")[-1]
                         zeile = txt.readline()
                         if zeile[:1]!="#" and title[0:1]!="=" and title.find("PremiumSlyNet")==-1 and title.find("==")==-1:
                             url=zeile
-                            addListItem(title, url[:-1], title.split(" - ")[-1].upper() + '.png')
+                            addListItem(title, url[:-1], title.split(" - ")[-1].upper() + '.PNG')
                     zeile = txt.readline()
                 txt.close()
             
@@ -327,13 +327,13 @@ class Main:
                         zeile = txt.readline()
                         if zeile[:1]!="#":
                             url=zeile
-                            addListItem(title, url[:-1], title.split(" - ")[-1].upper() + '.png')
+                            addListItem(title, url[:-1], title.split(" - ")[-1].upper() + '.PNG')
                     if zeile[:11]=="#EXTINF:-1,":
                         title=zeile.split(",")[-1]
                         zeile = txt.readline()
                         if zeile[:1]!="#" and title[0:1]!="=" and title.find("PremiumSlyNet")==-1 and title.find("==")==-1:
                             url=zeile
-                            addListItem(title, url[:-1], title.split(" - ")[-1].upper() + '.png')
+                            addListItem(title, url[:-1], title.split(" - ")[-1].upper() + '.PNG')
                     zeile = txt.readline()
                 txt.close()
             
