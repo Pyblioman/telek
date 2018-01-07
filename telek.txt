@@ -332,15 +332,10 @@ class Main:
                         zeile=zeile[:len(zeile)-1]
                     if len(zeile)>0 and zeile[len(zeile)-1:len(zeile)]==" ":
                         zeile=zeile[:len(zeile)-1]
-                    if zeile[:10]=="#EXTINF:0,":
+                    if zeile[:8]=="#EXTINF:,":
                         title=zeile.split(",")[-1]
-                        zeile = txt.readline()
-                        if zeile[:1]!="#":
-                            url=zeile
-                            addListItem(title, url[:-1], title.split(" - ")[-1].upper() + '.PNG')
-                    if zeile[:11]=="#EXTINF:-1,":
-                        title=zeile.split(",")[-1]
-                        zeile = txt.readline()
+                        while zeile[:1]=="#":
+                            zeile = txt.readline()
                         if zeile[:1]!="#" and title[0:1]!="=" and title.find("PremiumSlyNet")==-1 and title.find("==")==-1:
                             url=zeile
                             addListItem(title, url[:-1], title.split(" - ")[-1].upper() + '.PNG')
