@@ -326,18 +326,18 @@ class Main:
                 print "lesen: " + foldername
                 txt=open(foldername,'r')
                 zeile = txt.readline()
-                addListItem(zeile[:8], "http://test.com/", 'Test.PNG')
                 while zeile and zeile.find("=== PEERSTV (OFF) ===")==-1:
                     zeile=zeile[:len(zeile)-1]
                     if len(zeile)>0 and ord(zeile[len(zeile)-1:len(zeile)])==13:
                         zeile=zeile[:len(zeile)-1]
                     if len(zeile)>0 and zeile[len(zeile)-1:len(zeile)]==" ":
                         zeile=zeile[:len(zeile)-1]
-                    addListItem(zeile.split(",")[-1], "http://test.com/", 'Test.PNG')
                     if zeile[:8]=="#EXTINF:,":
                         title=zeile.split(",")[-1]
+                        addListItem(zeile.split(",")[-1], "http://test.com/", 'Test.PNG')
                         while zeile[:1]=="#":
                             zeile = txt.readline()
+                        addListItem(zeile, "http://test.com/", 'Test.PNG')
                         if zeile[:1]!="#" and title[0:1]!="=" and title.find("PremiumSlyNet")==-1 and title.find("==")==-1:
                             url=zeile
                             addListItem(title, url[:-1], title.split(" - ")[-1].upper() + '.PNG')
