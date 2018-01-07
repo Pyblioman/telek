@@ -233,6 +233,7 @@ class Main:
                     i=i+1
                     fileout.write("#EXTINF:0," + "Liste " + str(i) + "\n")
                     fileout.write(codi.kodi2Aus(zeile) + "\n")
+                    i=i+1
                     fileout.write("#EXTINF:0," + "Liste " + str(i) + "\n")
                     fileout.write(codi.kodi2SAus(zeile) + "\n")
                     zeile = txt.readline()
