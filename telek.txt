@@ -322,6 +322,7 @@ class Main:
             
                 xbmcplugin.endOfDirectory(addon_handle)
             else:
+                addListItem("Test", "http://test.com/", 'Test.PNG')
                 foldername = PlayListsPath + '/' + args['foldername'][0]
                 print "lesen: " + foldername
                 txt=open(foldername,'r')
